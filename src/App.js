@@ -1,25 +1,16 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
 
-function App() {
+import HomeView from './views/HomeView'
+
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <BrowserRouter> {/* 라우팅을 적용하기 위한 컴포넌트 */}
+      <Routes> {/* 라우트들을 정의하는 컨테이너*/}
+        <Route path="/" element={<HomeView />}></Route>
+      </Routes>
+    </BrowserRouter>
   );
-}
+};
 
 export default App;
