@@ -1,16 +1,7 @@
 import React from "react";
 // 리액트를 사용하기 위해 리액트 라이브러리를 불러오고 있다. 이렇게 하면 리액트의 기능과 컴포넌트를 사용할 수 있다.
 
-const contactText = [
-  {
-    link: "https://open.kakao.com/o/s07MGH1f",
-    title: "KAKAO : 박슬기",
-  },
-  {
-    link: "mailto:peach_crush@kakao.com",
-    title: "MAIL : peach_crush@kakao.com",
-  },
-];
+import { contactText } from "../constants/index";
 
 const Contact = () => {
   return (

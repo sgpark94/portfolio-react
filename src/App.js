@@ -1,13 +1,20 @@
-import React from "react";
-import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import React, { useEffect } from "react";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
 
-import HomeView from './views/HomeView'
+import HomeView from "./views/HomeView";
+import lenis from "./utils/lenis";
+import link from "./utils/link";
 
 const App = () => {
+  useEffect(() => {
+    lenis();
+    link();
+  }, []);
+
   return (
-    <BrowserRouter> {/* 라우팅을 적용하기 위한 컴포넌트 */}
-      <Routes> {/* 라우트들을 정의하는 컨테이너*/}
-        <Route path="/" element={<HomeView />}></Route>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<HomeView />} />
       </Routes>
     </BrowserRouter>
   );
